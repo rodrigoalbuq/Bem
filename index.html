@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+
+    <!-- Header BEM -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="https://wearecriativa.com.br/wp-content/uploads/2024/10/Logo-Criativa-e1729485245130-768x276.png"
+                    alt="Logo Agência Criativa Web"
+                    srcset="https://wearecriativa.com.br/wp-content/uploads/2024/10/Logo-Criativa-e1729485245130-768x276.png 2x">
+            </div>
+            <nav class="header__nav">
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#sobre">Sobre Nós</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#servicos">Serviços</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#contato">Contato</a></li>
+                </ul>
+                <button class="menu__toggle" aria-label="Abrir menu">&#9776;</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Banner BEM -->
+        <section id="home" class="banner">
+            <h1 class="banner__title">Bem-vindo à Agência Criativa Web</h1>
+            <p class="banner__desc">Transformando ideias em experiências digitais incríveis.</p>
+        </section>
+        <!-- Sobre BEM -->
+        <section id="sobre" class="sobre">
+            <h2 class="sobre__title">Sobre Nós</h2>
+            <p>Somos uma agência apaixonada por design e tecnologia. Valorizamos criatividade, inovação e resultados
+                reais para nossos clientes.</p>
+        </section>
+        <!-- Serviços BEM -->
+        <section id="servicos" class="servicos">
+            <h2 class="servicos__title">Serviços</h2>
+            <div class="servicos__grid">
+                <div class="servico">
+                    <h3 class="servico__title">Design Gráfico</h3>
+                    <img class="servico__img" src="https://dummyimage.com/300x200/4e54c8/fff&text=Design+Gráfico"
+                        alt="Design Gráfico" srcset="https://dummyimage.com/600x400/4e54c8/fff&text=Design+Gráfico 2x">
+                    <p>Criação de identidades visuais, materiais promocionais e layouts modernos.</p>
+                </div>
+                <div class="servico">
+                    <h3 class="servico__title">Desenvolvimento Web</h3>
+                    <img class="servico__img" src="https://dummyimage.com/300x200/00b894/fff&text=Desenvolvimento+Web"
+                        alt="Desenvolvimento Web"
+                        srcset="https://dummyimage.com/600x400/00b894/fff&text=Desenvolvimento+Web 2x">
+                    <p>Sites responsivos, landing pages e soluções digitais sob medida.</p>
+                </div>
+                <div class="servico">
+                    <h3 class="servico__title">Branding</h3>
+                    <img class="servico__img" src="https://dummyimage.com/300x200/f9ca24/222&text=Branding"
+                        alt="Branding" srcset="https://dummyimage.com/600x400/f9ca24/222&text=Branding 2x">
+                    <p>Construção e fortalecimento de marcas para destacar seu negócio no mercado.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Depoimentos BEM -->
+        <section id="depoimentos" class="depoimentos">
+            <h2 class="depoimentos__title">Depoimentos</h2>
+            <div class="depoimentos__lista">
+                <blockquote class="depoimentos__item">
+                    <p>“A Agência Criativa Web superou nossas expectativas! Profissionalismo e criatividade
+                        em cada detalhe.”</p>
+                    <cite class="depoimentos__autor">— Leila Silva, CEO da Startup X</cite>
+                </blockquote>
+                <blockquote class="depoimentos__item">
+                    <p>“Equipe dedicada e resultados incríveis. Recomendo para quem busca inovação.”</p>
+                    <cite class="depoimentos__autor">— João Paulo, Diretor de Marketing</cite>
+                </blockquote>
+            </div>
+        </section>
+        <!-- Contato BEM -->
+        <section id="contato" class="contato">
+            <h2 class="contato__title">Contato</h2>
+            <div class="contato__info">
+                <div class="contato__info--item">
+                    <p><strong>Endereço:</strong> Rua Exemplo, 1234 - Centro, Cidade/UF</p>
+                    <p><strong>Telefone:</strong> (00) 99999-9999</p>
+                    <p><strong>E-mail:</strong> contato@agenciacriativaweb.com</p>
+                </div>
+                <form class="contato__form">
+                    <label class="contato__form--label" for="nome">Nome:</label>
+                    <input class="contato__form--input" type="text" id="nome" name="nome" placeholder="Seu nome"
+                        required>
+                    <label class="contato__form--label" for="email">E-mail:</label>
+                    <input class="contato__form--input" type="email" id="email" name="email" placeholder="Seu e-mail"
+                        required>
+                    <label class="contato__form--label" for="mensagem">Mensagem:</label>
+                    <textarea class="contato__form--textarea" id="mensagem" name="mensagem" rows="4"
+                        placeholder="Sua mensagem" required></textarea>
+                    <button class="contato__form--btn" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer BEM -->
+    <footer class="footer">
+        <p>&copy; 2025 Agência Criativa Web. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Menu responsivo (mantido, pois a classe .menu permanece para compatibilidade BEM)
+        const menuToggle = document.querySelector('.menu__toggle');
+        const menu = document.querySelector('.menu');
+        if (menuToggle && menu) {
+            menuToggle.addEventListener('click', () => {
+                menu.classList.toggle('menu--aberto');
+            });
+        }
+    </script>
+</body>
+
+</html>
