@@ -1,0 +1,21 @@
+@use "variaveis";
+@use "mixin" as *;
+
+//Estilos base como body, tipografia, reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    @include font(16px);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    color: variaveis.$cor-texto;
+    background: variaveis.$cor-fundo;
+    line-height: 1.6;
+}

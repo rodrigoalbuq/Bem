@@ -1,0 +1,361 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #333;
+  background: #f7f7f7;
+  line-height: 1.6;
+}
+
+/* Menu ul */
+.menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.menu__link:hover {
+  color: #f9ca24;
+}
+
+.menu__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 10;
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(120deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  text-align: center;
+  padding: 8vh 2vw 10vh 2vw;
+}
+
+.banner__title {
+  font-size: 2.5rem;
+  padding: 0 2vw;
+}
+
+.banner__desc {
+  font-size: 1.3rem;
+}
+
+/* Serviços */
+.servicos {
+  background: #fff;
+  padding: 6vh 2vw;
+}
+
+.servicos__title {
+  text-align: center;
+  color: #00b894;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.servicos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servico {
+  background: #f7f7f7;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.servico:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(78, 84, 200, 0.1);
+}
+
+.servico__img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.servico__title {
+  color: #4e54c8;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* Depoimentos */
+.depoimentos {
+  background-color: #f9ca24;
+  color: #333;
+  padding: 6vh 2vw;
+}
+
+.depoimentos__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.depoimentos__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.depoimentos__item {
+  background: #fffbe6;
+  border-left: 5px solid #4e54c8;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  font-style: italic;
+}
+
+.depoimentos__autor {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #4e54c8;
+}
+
+.header {
+  background: #2d2d2d;
+  color: #fff;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  max-width: 220px;
+  min-width: 0;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.header__logo img {
+  max-width: 100%;
+  max-height: 2.5rem;
+  height: auto;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.header__nav {
+  position: relative;
+}
+
+/* Sobre */
+.sobre {
+  max-width: 900px;
+  margin: 6vh auto;
+  padding: 0 2vw;
+  text-align: center;
+}
+.sobre__title {
+  color: #4e54c8;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.footer {
+  background: #2d2d2d;
+  color: #fff;
+  text-align: center;
+  padding: 2vh 0;
+  font-size: 1rem;
+  margin-top: 4vh;
+}
+
+/* Contato */
+.contato {
+  background: #fff;
+  padding: 6vh 2vw;
+}
+.contato__title {
+  text-align: center;
+  color: #00b894;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.contato__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contato__info--item {
+  flex: 1 1 220px;
+  min-width: 220px;
+  font-size: 1.1rem;
+}
+.contato__form {
+  flex: 1 1 320px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.contato__form--label {
+  font-weight: 600;
+  color: #4e54c8;
+}
+.contato__form--input, .contato__form--textarea {
+  font-size: 1rem;
+  padding: 0.7em 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  background-color: #fff;
+  resize: none;
+}
+.contato__form--btn {
+  background: #4e54c8;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.8em 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contato__form--btn:hover {
+  background: #00b894;
+}
+
+/* Responsividade a partir de 900px */
+@media (max-width: 900px) {
+  .header__container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .contato__info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+/* Responsividade para dispositivos menores, a partir de 700px */
+@media (max-width: 700px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #333;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1.5rem 0;
+    z-index: 10;
+    max-width: 100vw;
+  }
+  .menu--aberto > .menu__item {
+    border-bottom: 5px solid #444;
+  }
+  .menu--aberto > .menu__item:last-child {
+    border-bottom: 5px solid #444;
+  }
+  .menu--aberto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__toggle {
+    display: block;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 auto;
+    border-radius: 0;
+    position: static;
+    top: unset;
+    right: unset;
+    z-index: 20;
+    background: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2vw;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .header__container {
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+  .servicos__grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsividade para dispositivos muito pequenos, a partir de 500px */
+@media (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+  .banner__title {
+    font-size: 1.5rem;
+  }
+  .servico__title {
+    font-size: 1.1rem;
+  }
+  .depoimentos__title,
+  .servicos__title,
+  .contato__title,
+  .sobre__title {
+    font-size: 1.3rem;
+  }
+  .contato__form {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

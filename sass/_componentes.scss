@@ -1,0 +1,140 @@
+@use "base";
+@use "variaveis";
+@use "mixin" as *;
+@use "sass:math";
+
+
+
+
+/* Menu ul */
+.menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+}
+
+
+.menu__link {
+    color: variaveis.$cor-branca;
+    text-decoration: none;
+    @include font(1.1rem);
+    transition: color 0.2s;
+}
+
+.menu__link:hover {
+    color: variaveis.$cor-terciaria;
+}
+
+.menu__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: variaveis.$cor-branca;
+    @include font(2rem);
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 10;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(120deg, #4e54c8 0%, #8f94fb 100%);
+    color: variaveis.$cor-branca;
+    text-align: center;
+    @include espacamento(8vh 2vw 10vh 2vw);
+}
+
+.banner__title {
+    @include font(2.5rem);
+    @include espacamento;
+}
+
+.banner__desc {
+    @include font(1.3rem);
+}
+
+
+/* Serviços */
+.servicos {
+    background: variaveis.$cor-branca;
+    @include espacamento(6vh 2vw);
+}
+
+.servicos__title {
+    text-align: center;
+    color: variaveis.$cor-secundaria;
+    margin-bottom: 2rem;
+    @include font(2rem);
+}
+
+.servicos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: calc(variaveis.$largura-maxima - 100px);
+    margin: 0 auto;
+}
+
+.servico {
+    background: variaveis.$cor-fundo;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    @include espacamento(2rem 1.5rem);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.servico:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(78, 84, 200, 0.10);
+}
+
+.servico__img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.servico__title {
+    color: variaveis.$cor-primaria;
+    margin-bottom: 0.5rem;
+    @include font(1.3rem);
+}
+
+/* Depoimentos */
+.depoimentos {
+    background-color: variaveis.$cor-terciaria;
+    color: variaveis.$cor-texto;
+    @include espacamento(6vh 2vw);
+}
+
+.depoimentos__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    @include font(2rem);
+}
+
+.depoimentos__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: calc(variaveis.$largura-maxima - 400px);
+    margin: 0 auto;
+}
+
+.depoimentos__item {
+    background: #fffbe6;
+    border-left: 5px solid #4e54c8;
+    @include espacamento(1.5rem 2rem);
+    border-radius: 0.5rem;
+    font-style: italic;
+}
+
+.depoimentos__autor {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: variaveis.$cor-primaria;
+}

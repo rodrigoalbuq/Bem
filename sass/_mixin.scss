@@ -1,0 +1,9 @@
+@mixin espacamento($valor: 0 2vw) {
+    padding: $valor;
+}
+
+
+@mixin font($valor: 1rem) {
+    font-size: $valor;
+
+}
